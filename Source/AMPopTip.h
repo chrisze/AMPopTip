@@ -420,6 +420,12 @@ typedef NS_ENUM(NSInteger, AMPopTipActionAnimation) {
  */
 @property (nonatomic, copy) void (^appearHandler)();
 
+/** Before dismiss handler
+ *
+ * A block that will be fired just before the popover is dismissed.
+ */
+@property (nonatomic, copy) void (^beforeDismissHandler)();
+
 /** Dismiss handler
  *
  * A block that will be fired when the popover is dismissed.

@@ -388,6 +388,9 @@
     if (!self.isVisible || self.isAnimating) {
         return;
     }
+    if (self.beforeDismissHandler) {
+        self.beforeDismissHandler();
+    }
     self.isAnimating = YES;
     [self.dismissTimer invalidate];
     self.dismissTimer = nil;
